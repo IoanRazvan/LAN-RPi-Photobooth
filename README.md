@@ -1,4 +1,4 @@
-# RPi LAN Image Processing Stream
+# LAN RPi Photobooth
 
 Description to be added
 
