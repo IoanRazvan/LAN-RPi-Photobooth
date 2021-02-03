@@ -106,8 +106,8 @@ class PiNetworkVideoStream:
 
 
 ap = argparse.ArgumentParser()
-ap.add_argument('-si', '--server-ip', type=str, help='the lan ip of desktop')
-ap.add_argument('-p', '--port', type=int, default=8000, help='port number where server listens for connections')
+ap.add_argument('-si', '--server-ip', type=str, help='the LAN ip of the server')
+ap.add_argument('-p', '--port', type=int, default=8000, help='port number where the server listens for connections')
 ap.add_argument('-res', '--resolution', type=str, help='widthxheight', default='320x240')
 args = vars(ap.parse_args())
 

@@ -1,4 +1,3 @@
-from __future__ import print_function
 from PIL import Image, ImageTk
 import tkinter as tki
 import socket
@@ -10,10 +9,10 @@ import argparse
 
 class PhotoBoothApp:
     def __init__(self, ip, port):
-        self.server_socket = socket.socket()
-        self.server_socket.bind((ip, port))
-        self.server_socket.listen(0)
-        connection = self.server_socket.accept()[0]
+        self.serverSocket = socket.socket()
+        self.serverSocket.bind((ip, port))
+        self.serverSocket.listen(0)
+        connection = self.serverSocket.accept()[0]
         self.client2Server = connection.makefile('rb')
         self.server2Client = connection.makefile('wb')
 
@@ -89,7 +88,7 @@ class PhotoBoothApp:
     def cleanup(self):
         self.server2Client.close()
         self.client2Server.close()
-        self.server_socket.close()
+        self.serverSocket.close()
         self.root.quit()
     
     def goBack(self):
