@@ -2,7 +2,7 @@
 
 This project was made for the Computer Systems Architecture course. The goal was to demonstrate the ability to capture and process images using a Raspberry Pi. For this purpose, the Raspberry Pi camera module was used because it has it's own Python package.
 
-The project consists of two scripts communicating through the LAN using sockets. The script `client.py` will run on the Raspberry, sending images to the server in the format image length followed by its bytes. The client also opens a new thread to listen for commands coming from the server. The server receives the images and displays them in the graphical interface. Clicking the buttons causes the server to send various requests of action to the client.
+The project consists of two scripts communicating through the LAN using sockets. The script `client.py` will run on the Raspberry, sending images to the server in the format `image_length` followed by the bytes of an image. The client also opens a new thread to listen for commands coming from the server. The server receives the images and displays them in the graphical interface. Clicking the buttons causes the server to send various requests of action to the client.
 
 ## Prerequisites
 
